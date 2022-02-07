@@ -37,7 +37,10 @@ Numbering does not convery any order inside an evidence level.
 | PM5 | moderate | novel AA change, with previous PV with different AA | splicing changes |
 | PM6 | moderate | unconfirmed de-novo | |
 | PP1 | supporting | co-segregation in known disease gene | |
-| PP2 | supporting | 
+| PP2 | supporting | Missense in low-rate missense gene and as common MOD | |
+| PP3 | supporting | computational evidence | can only be used once |
+| PP4 | supporting | highly specific phenotype | |
+| PP5 | supporting | reported pathogenic without laboratory evaluation | |
 
 ### Benign Variants
 
@@ -45,7 +48,24 @@ Numbering does not convery any order inside an evidence level.
 
 ### Combination of Scoring rules
 
+```
+pathogenic =
+    1. (1 PVS && (1 PS || 2 PM || (1 PM && 1 PP) || 2 PP))
+    2. 2 PS
+    3. 1 PS && (3 PM || 2 PM && 2 PP || 1 PM && 4 PP)
+likely pathogenic =
+    1. 1 PVS && 1 PM
+    2. 1 PS && 1-2 PM
+    3. 1 PS && 2 PP
+    4. 3 PM
+    5. 2 PM && 2 PP
+    6. 1 PM && 4 PP
+benign =
+    1. 1 BA1
+    2. 2 BS
+likely benign =
 
+```
 
 ## Literature
 
